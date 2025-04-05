@@ -236,33 +236,33 @@ M.	Managing Difficulties	Коллекции	10<br>
 ## Домашнее задание 12. Выражения<br>
 Разработайте классы Const, Variable, Add, Subtract, Multiply, Divide для вычисления выражений с одной переменной в типе int (интерфейс Expression).<br>
 Классы должны позволять составлять выражения вида<br>
-new Subtract(<br>
-    new Multiply(<br>
-        new Const(2),<br>
-        new Variable("x")<br>
-    ),<br>
-    new Const(3)<br>
-).evaluate(5)<br>
+new Subtract(
+    new Multiply(
+        new Const(2),
+        new Variable("x")
+    ),
+    new Const(3)
+).evaluate(5)
             
 При вычислении такого выражения вместо каждой переменной подставляется значение, переданное в качестве параметра методу evaluate. Таким образом, результатом вычисления приведенного примера должно стать число 7.<br>
 Метод toString должен выдавать запись выражения в полноскобочной форме. Например<br>
-new Subtract(<br>
-    new Multiply(<br>
-        new Const(2),<br>
-        new Variable("x")<br>
-    ),<br>
-    new Const(3)<br>
-).toString()<br>
+new Subtract(
+    new Multiply(
+        new Const(2),
+        new Variable("x")
+    ),
+    new Const(3)
+).toString()
             
 должен выдавать ((2 * x) - 3).<br>
 Сложный вариант. Метод toMiniString (интерфейс ToMiniString) должен выдавать выражение с минимальным числом скобок. Например<br>
-new Subtract(<br>
-    new Multiply(<br>
-        new Const(2),<br>
-        new Variable("x")<br>
-    ),<br>
-    new Const(3)<br>
-).toMiniString()<br>
+new Subtract(
+    new Multiply(
+        new Const(2),
+        new Variable("x")
+    ),
+    new Const(3)
+).toMiniString()
             
 должен выдавать 2 * x - 3.<br>
 Реализуйте метод equals, проверяющий, что два выражения совпадают. Например,<br>
